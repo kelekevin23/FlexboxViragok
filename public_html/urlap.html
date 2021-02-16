@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Kelemen Kevin</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="stilus.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <main>
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="#">Cég neve</a></li>
+                        <li><a href="index.html">Kezdőlap</a></li>
+                        <li><a href="#">Galéria</a></li>
+                        <li><a href="#">Rólunk</a></li>
+                        <li><a href="urlap.html">Kapcsolat</a></li>
+                    </ul>
+
+                </nav>
+            </header>
+            <form action="feldolgoz.php" method="post" oninput="kics.value=parseInt(csuszka.value)">
+                <fieldset>
+                    <legend>Regisztráció</legend>
+                    <br>
+                    <div>
+                        <label for="nev">Felhasználónév </label>
+                        <label class="csillag">*</label>
+                    </div>
+                    <div>
+                        <input type="text" name="nev" id="nev" required placeholder="csak ékezetmentes betűk">
+                    </div>
+                    <div>
+                        <label for="jsz">jelszó </label>
+                        <label class="csillag">*</label>
+                    </div>
+                    <div>
+                        <input type="password" name="jsz" id="jsz" required placeholder="min. 3 karakter">   
+                    </div>
+                    <div>
+                        <label for="mail">e-mail: </label>
+                        <label class="csillag">*</label>
+                    </div>
+                    <div>
+                        <input type="email" name="mail" id="mail" required placeholder="vmi@mi.hu">
+                    </div>
+                    <br>
+                </fieldset><br>
+
+
+
+
+                <br><br>
+                <fieldset>
+                    <legend>Kedvenc képek</legend>
+
+                    <label for="csuszka">Szeretsz képeket nézegetni?</label>
+
+                    <input type="radio" name="valasz" id="valasz1" value="valasz1" checked>
+                    <label for="nyelv">igen</label>
+
+                    <input type="radio" name="valasz" id="valasz2" value="valasz2" >
+                    <label for="nyelv">nem</label>
+                    <br><br>
+                    <label>Ha igen, mennyire? </label>
+                    <input type="range" name="csuszka" id="csuszka" value="1" min="1" max="5">
+                    <label for="csuszka"> 5 -> </label>
+                    <output name="kics" id="kics">1</output>
+                    <br>
+                    <br>
+                    <fieldset>
+                        <legend>Milyen fajtákat kedvelsz?</legend>
+
+                        <table>
+                            <tr>
+                                <th>Állatok </th> 
+                                <th>Tájképek</th> 
+                                <th>Járművek</th> 
+                            </tr> 
+
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="kep" id="kep1" value="kep1" >
+                                    <label for="kep">Kutyás</label>
+                                </td> 
+                                <td>
+                                    <input type="checkbox" name="kep" id="kep2" value="kep2" >
+                                    <label for="kep">Erdős</label>
+                                </td> 
+                                <td>
+                                    <input type="checkbox" name="kep" id="kep3" value="kep3" >
+                                    <label for="kep">Autók</label>
+                                </td> 
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="kep" id="kep4" value="kep4" >
+                                    <label for="kep">Macskás</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="kep" id="kep5" value="kep5" >
+                                    <label for="kep">Havas</label>
+                                </td> 
+                                <td>
+                                    <input type="checkbox" name="kep" id="kep6" value="kep6" >
+                                    <label for="kep">Motorok</label>
+                                </td> 
+                            </tr> 
+
+                        </table><br>
+                        <textarea rows="10" cols="30">
+Egyéb kedvencek...
+                        </textarea>
+                    </fieldset>
+                </fieldset><br>
+                <input type="submit" name="kuld" id="kuld" value="Küldés">
+            </form>
+        </main>
+
+    </body>
+</html>

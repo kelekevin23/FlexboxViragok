@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+
+body{
+    background-image: url(kepek/hatter.jpg);
+    color: white;
+}
+main, header, article, aside, footer{
+    border: 2px solid black;
+    padding: 10px;
+    margin: 2px;
+}
+* {
+    box-sizing: border-box;
+}
+main{
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: darkgreen;
+    /*gap: 2px;*/
+}
+header, nav{
+    flex: 0 0 calc(100% - 4px);;
+    order: 0;
+}
+
+article{
+    flex: 4 0 calc(50% - 4px);
+    order:2;
+}
+#bal{
+    flex: 1 0 calc(25% - 4px);
+    order: 1;
+}
+#jobb{
+    flex: 1 0 calc(25% - 4px);
+    order:3;
+}
+footer{
+    flex: 0 0 calc(100% - 4px);;
+    order: 4;
+}
+/* Galéria kialakítása */
+article div img{
+    width: 100%;
+}
+article{
+    display: flex;
+}
+article div{
+    width: 33.33%;
+}
+footer{
+    text-align: center;
+}
+
+/* Menü kialakítása*/
+header nav ul{
+    display: flex;
+}
+header nav li{
+    margin: 5px;
+    list-style-type: none;
+    padding-left: 20px;
+}
+header nav li a {
+    text-decoration: none;
+    color: yellow;
+    
+}
+header{
+    background: lightblue;
+}
+
+
+/* Űrlap */
+form{
+    text-align: center;
+    margin: auto;
+}
+#kuld{
+    padding: 15px;
+}
+td{
+    padding: 10px;
+}
+.csillag{
+    color: red;
+}
+
+/* Reszponzivitás */
+@media screen and (max-width: 700px){
+    main, header, article, aside, footer{
+    margin: 0px;
+    }
+    article{
+        order: 1;
+        flex: 0 0 100%;
+    }
+    #jobb, #bal{
+        flex: 0 0 100%;
+    }
+    header nav ul{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 500px){
+ 
+    article{
+        flex-direction: column;
+    }
+    article div{
+        width: 100%;
+    }
+}
